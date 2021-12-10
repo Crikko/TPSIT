@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<body>
+<input type=number id=A value=8 /><br>
+<input type=number id=B value=9 /><br>
+<input type=number id=C value=10 /><br>
+<input type=button value=ok onclick="maxminmed();" />
+<div id="OT"></div><br>
+
+<script>
+function maxminmed(){
+var a, b, c,max;
+
+a=parseInt(A.value);
+b=parseInt(B.value);
+c=parseInt(C.value);
+
+if(a>b){max=a;min=b;}
+else {max=b;min=a;}
+
+if(c>max){med=max;max=c;}
+else if(c<min){med=min;min=c;}
+else {med=c;}
+
+
+OT.innerHTML='max:'+max;
+}
+</script>
+</body>
+</html>
