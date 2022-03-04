@@ -1,0 +1,116 @@
+<html>
+<body>
+<h1>CONVERSIONE COMPLETA GRASSI CARBOIDRATI E PROTEINE</h1>
+
+<style>
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #c7cac7}
+
+.button:active {
+  background-color: #acacac;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.container{
+ 
+ margin: 10px;
+ width: 300px;
+ height: 590px;
+ text-align: center;
+ border: 2px solid #000000;
+ background-color: rgb(87, 216, 255);
+}
+ 
+ 
+ 
+ </style>
+ </head>
+</body>
+
+
+
+ <form id="frm1">
+ Inserisci grassi in grammi: <input type="number" name="Hbase" value="0"><br>
+ Calorie fornite: <input type="number" name="Harrivo" value="0"><br>
+ Inserisci carboidrati in grammi: <input type="number" name="Hcarboidrati" value="0"><br>
+ Calorie fornite: <input type="number" name="Harrivo2" value="0"><br>
+ 
+ </form>
+
+
+<button class="button"onclick="myFunction()">CALCOLA CALORIE</button>
+
+<div class="container">
+<p>grassi:</p>
+<p id="base"></p>
+<p>calorie:</p>
+<p id="arrivo"></p>
+
+CONVERSIONE
+<p id="demo"></p><p>kcal</p>
+
+<p>carboidrati:</p>
+<p id="carboidrati"></p>
+<p>calorie:</p>
+<p id="arrivo2"></p>
+
+CONVERSIONE
+<p id="demo2"></p><p>kcal</p>
+
+SOMMA DELLE CALORIE
+<p id="demo3"></p><p>kcal</p>
+</div>
+<script>
+function myFunction() {
+
+var x = document.getElementById("frm1");
+
+var base=x.elements[0].value; 
+document.getElementById("base").innerHTML =base;
+
+var arrivo=x.elements[1].value;
+document.getElementById("arrivo").innerHTML =arrivo;
+
+var carboidrati=x.elements[2].value;
+document.getElementById("carboidrati").innerHTML=carboidrati;
+
+var arrivo2=x.elements[3].value;
+document.getElementById("arrivo2").innerHTML=arrivo2;
+
+ document.getElementById("demo").innerHTML =Dislivello(base,arrivo);
+
+ document.getElementById("demo2").innerHTML=Dislivello(carboidrati,arrivo2);
+
+ somma=arrivo+arrivo2;
+
+ document.getElementById("demo3").innerHTML=somma;
+}
+
+function Dislivello(numero1,numero2){
+return numero1*numero2;
+}
+
+function Dislivello(carboidrati,arrivo2){
+ return carboidrati*arrivo2;
+}
+
+
+
+</script>
+
+</body>
+</html>
