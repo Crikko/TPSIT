@@ -3,86 +3,60 @@
 <body>
 <h1>grammi in calorie </h1>
 <form id="frm1" >
- METTERE grassi: <input type="text" name="Hbase" value="0"><br>
- VALORE CALORIE:<input type="text" name="Harrivo" value="0"><br>
- VALORE CArboidrato:<input type="text" name="Hsomma" value="0"><br>
+ AGGIUNGERE GRASSI: <input type="text" name="Hbase" value="0"><br>
+ AGGIUNGERE CARBOIDRATI:<input type="text" name="Hsomma" value="0"><br>
 
 </form>
-<style>
-    .ul {
-    padding: 0;
-    list-style-type: none;
-}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .button {
+      padding: 15px 25px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #04AA6D;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+    
+    .button:hover {background-color: #3e8e41}
+    
+    .button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
 
-ul li {
-    box-sizing: border-box;
-    width: 15em;
-    height: 3em;
-    font-size: 10px;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    box-shadow: 0 0 1em rgba(0,0,0,0.2);
-    color: white;
-    font-family: sans-serif;
-    text-transform: capitalize;
-    line-height: 3em;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-ul li:nth-child(odd) {
-    background: linear-gradient(to right,rgb(255, 153, 0), rgb(216, 18, 150));
-    text-align: left;
-    padding-left: 5%;
-    transform: perspective(500px) rotateY(30deg);
-}
-
-ul li:nth-child(even) {
-    background: linear-gradient(to left, orange, tomato);
-    text-align: right;
-    padding-right: 10%;
-    transform: perspective(400px) rotateY(-45deg);
-}
-
-ul li:nth-child(odd):hover {
-    transform: perspective(200px) rotateY(45deg);
-    padding-left: 5%;
-}
-
-ul li:nth-child(even):hover {
-    transform: perspective(300px) rotateY(-45deg);
-    padding-right: 5%;
-}
+    
+  
 #miodiv{
-    background-color: rgb(31, 8, 240);
+    background-color: rgb(184, 161, 161);
     height: 400px;
     
 }
 
 
 </style>
+</head>
+</body>
 <div id="miodiv">
 <p>CALORIE E GRASSI:</p>
-<ul>
-<li><button class="button" onclick="myFunction()" class="ul"> converti in kcal</button></li> 
-</ul>
 
-<ul>
-<li><button class="button" onclick="ckal()" class="ul"> converti calorie</button></li> 
-</ul>
+<button class="button" onclick="myFunction()" class="ul"> converti in kcal</button>
+
 
 
 <p>grassi:</p>
 <p id="base"></p>
-<p>calorie:</p>
-<p id="arrivo"></p>
 <p>carboidrati:</p>
-<p id="somma"></p>
+<p id="arrivo"></p>
 
-grassi in ckal
+carboidrati in kcal
 <p id="demo"></p>
-carboidrati in calorie
-<p id="demi"></p>
 <script>
 function myFunction() {
 
@@ -97,13 +71,13 @@ document.getElementById("arrivo").innerHTML =arrivo;
 document.getElementById("demo").innerHTML =Dislivello(base,arrivo);
  
 }
-function ckal(){
+function kcal(){
 
     
 var x = document.getElementById("frm1");
 
 var somma=x.elements[2].value;
-document.getElementById("somma").innerHTML =somma;
+document.getElementById("base").innerHTML =somma;
 
 var arrivo=x.elements[1].value;
 document.getElementById("arrivo").innerHTML =arrivo;
