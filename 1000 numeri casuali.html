@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+</body>
+</html>
+<body>
+
+    <h2>lancia 1000 numeri</h2>
+    
+    
+    <p id="demo3">Cliccami per fare 1000 lanci</p>
+    
+    <script>
+    
+    document.getElementById("demo3").onclick = function() {ThreeFunction()};
+    
+    
+    
+      function ThreeFunction() {
+      var i=0;
+      var c=[];
+        do{
+        c[i]="<br>"+Math.floor(Math.random() * 7);
+        i++;
+        }while (i<1001);
+        
+      document.getElementById("demo3").innerHTML = c;
+      }
+    </script>
+    
+    
+    
+    </body>
