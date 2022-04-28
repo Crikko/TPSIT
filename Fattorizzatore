@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fattorizzatore</title>
+</head>
+<h1>
+  Fattorizzatore
+</h1>
+<body>
+       <input id="mioinput" type="text">
+       <button onclick="dividinum();" id="mio bottone">cerca i fattori</button>
+       <br><button onclick="trovaNumero();" id="mio bottone">cerca numero con più fattori tra 1 e 1000</button></br>
+       <br><button onclick="trova();" id="mio bottone">esegue il prodotto tra 840 e il numero con più fattori tra 1000 e 2000</button></br>
+
+    <script>
+
+function dividinum()
+    {
+        let in1=0;
+        in1=document.getElementById("mioinput").value;
+        document.write("il mio input è"+in1);
+        document.write("<br>");
+        document.write("<span>"+Fattorizzatore(in1)+"</span>"+"<br>");
+        document.write("<br>");
+    
+        function Fattorizzatore(n)
+        {
+            let fattore=1;
+            let fattoriOUT="";
+            for(fattore=1;fattore<=n/2;fattore++)
+            {
+                  if(n%fattore==0)
+                  {
+                     fattoriOUT=fattoriOUT+fattore+" ";
+                  }
+            }
+            return fattoriOUT;
+        }
+    }
+   function trovaNumero(){
+     let fattore=1; 
+     let div=1;
+     let cont=0;
+     let cont1=0;
+     let contmax=0;
+     let a=0;
+    for (fattore=1; fattore<1000; fattore++)
+        {
+            for (div=1; div<1000; div++)
+            {
+                if (fattore%div==0)
+                {
+                    cont++;
+                    cont1++;
+                }
+ 
+            }  
+ 
+            if (cont>=contmax)
+                {
+                    contmax=cont;
+                    a=fattore;
+                }
+                cont=0;
+        }
+ 
+       
+cont4=cont1-336;
+
+document.write("Il numero con più fattori è " + a + " e ne ha " + contmax);
+document.write("<br>" + "la somma di tutti i fattori esclusa la somma dei numeri primi è " + cont4);
+
+}
+function trova(){
+     let fattore=1;
+     let div=1;
+     let cont=0;
+     let cont1=0;
+     let contmax=0;
+     let a=0;
+    for (fattore=1; fattore<2000; fattore++)
+        {
+            for (div=1; div<2000; div++)
+            {
+                if (fattore%div==0)
+                {
+                    cont++;
+                    cont1++;
+                }
+ 
+            }  
+ 
+            if (cont>=contmax)
+                {
+                    contmax=cont;
+                    a=fattore;
+                }
+                cont=0;
+        }
+cont4=840*1680;
+
+document.write("Il numero con più fattori tra 1000 e 2000 è " + a + " e ne ha " + contmax);
+document.write("<br>" + "Il prodotto del numero con più fattori tra 0 e 1000 (840) e tra 1000 e 2000 (1680) è " + cont4);
+}
+</script>
+</body>
+</html>
