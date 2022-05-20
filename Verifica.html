@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verica</title>
+    
+</head>
+<body>
+    <br><a href="https://mirkosciurti.altervista.org/">altervista</a></br>
+    <br><a href="https://crikko.github.io/TPSIT/">github</a></br>
+    <br><a href="https://crikko.github.io/TPSIT/bootstrap.html">bootstrap5</a><br>
+
+    <br><button onclick="Esegui();" id="mio bottone">cerca i fattori di 840</button></br>
+    <br><button onclick="trovaNumero();" id="mio bottone">cerca il primo numero primo dopo 840 </button></br>
+    <br><button onclick="trova();" id="mio bottone">cerca il primo numero primo dopo 100000</button></br>
+    <br><button onclick="trovaProdotto();" id="mio bottone">fattorizza il risultato</button></br>
+    
+    <script>
+        function Esegui(){
+
+let n=840
+let moltiplicazione=0;
+let fattore=1;
+let fattoriOUT="";
+
+for(fattore=1;fattore<=n/2;fattore++)
+        {
+              if(n%fattore==0)
+              {
+                 fattoriOUT=fattoriOUT+fattore+" "+"<br>"+"forza napoli";
+              }
+        }
+document.write("i fattori di "+840+"<br>"+fattoriOUT)
+}
+function trovaNumero(){
+let n=853;
+let div=1;
+let conta=0;
+while(conta<=1 && div<=n/2) {    
+if(n%div==0)  
+{
+			conta++;
+}	
+		div++;
+	}
+
+document.write("il numero primo dopo 840 e' "+n)
+}
+function trova(){
+let n=100003;
+let div=1;
+let conta=0;
+while(conta<=1 && div<=n/2) {    
+if(n%div==0)  
+{
+			conta++;
+}	
+		div++;
+	}
+
+document.write("il numero primo dopo 100000 e' "+n+" il risultato della moltiplicazione è ")
+moltiplicazione=100003*853;
+
+document.write(moltiplicazione)
+}
+function trovaProdotto(){
+
+let n=85302559;
+let fattore=1;
+let fattoriOUT="";
+
+for(fattore=1;fattore<=n/2;fattore++)
+        {
+              if(n%fattore==0)
+              {
+                 fattoriOUT=fattoriOUT+fattore+" ";
+              }
+        }
+document.write(" i fattori di "+85302559+" sono "+fattoriOUT)
+}
+    </script>
+</body>
+</html>
