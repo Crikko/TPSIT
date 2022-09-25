@@ -1,0 +1,55 @@
+<script Language='JavaScript'>
+   function inizia() {
+       var pos = -1;
+       var a = document.getElementsByName('A');
+       for (i = 0; i < a.length; i++) {
+           a[i].style.left = (i * 60) + 10;
+       }
+       let ultimo = a.length;
+       setInterval(function() {
+           for (i = 0; i < ultimo; i++) {
+               a[i].style.backgroundColor = 'white';
+           }
+           pos = pos + 1;
+           a[pos].style.backgroundColor = 'green';
+           if (pos + 1 == ultimo) {
+               a[pos].style.backgroundColor = 'green';
+               a[pos].style.border = 'solid black';
+               pos = -1;
+               ultimo = ultimo - 1;
+           }
+      }, 300);
+   }
+</script>
+
+<html>
+
+<head>
+   <title>esercizio 1</title>
+</head>
+
+<style type="text/css">
+   .mieidiv {
+       left: 50px;
+       top: 50px;
+       height: 50px;
+       background-color: white;
+       color: white;
+       position: absolute;
+       height: 50px;
+       width: 50px;
+       text-align: center;
+       font-size: 20px;
+       border-width: 1px;
+   }
+</style>
+
+<body onLoad="inizia()">
+   <div name='A' class='mieidiv'></div>
+   <div name='A' class='mieidiv'></div>
+   <div name='A' class='mieidiv'></div>
+   <div name='A' class='mieidiv'></div>
+   <div name='A' class='mieidiv'></div>
+   <div name='A' class='mieidiv'></div>
+</body>
+</html>
